@@ -1,0 +1,15 @@
+.vacation {
+  margin: auto;
+  overflow-x: hidden;
+  min-height: 200px;
+  max-width: 800px;  
+
+  &__header {
+    text-align: center;
+    text-transform: uppercase;    
+  }
+  
+  &__list {
+    border: 1px solid grey;
+  }
+}

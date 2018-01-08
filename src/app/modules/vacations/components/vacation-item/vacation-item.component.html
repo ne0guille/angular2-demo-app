@@ -1,0 +1,17 @@
+<div class="row vacation-item">
+  <div class="col-sm-4">
+    <img class="vacation-item__img" [src]="vacation.photo" width="150" height="120" />
+  </div>
+  <div class="col-sm-5">
+    <b class="vacation-item__name">Place: {{ vacation.name }} </b>
+  </div>
+  <div class="col-sm-5">
+    <p class="vacation-item__days">{{ vacation.durationInDays }} days</p> 
+  </div>
+  <div class="col-sm-5">
+    <p class="vacation-item__dates">{{ vacation.dates }}</p>
+  </div>
+  <div class="col-sm-12">
+    <p class="vacation-item__legend">Component template</p>
+  </div>
+</div>

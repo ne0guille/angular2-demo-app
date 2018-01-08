@@ -1,0 +1,36 @@
+<section class="vacation container-fluid">
+  <h3 class="vacation__header">My last Vacactions</h3>
+
+  <div class="vacation__list row">
+    <infinite-scroll [list]="vacations || []"
+                     [itemTemplate]="templateRef"
+                     [complete]="vacations && vacations?.length >= total"
+                     (bottomReached)="onBottomReached()">
+    </infinite-scroll> 
+</div>
+
+<ng-template #vacationListItem let-item="item">
+  <vacation-item [vacation]="item"></vacation-item>
+</ng-template>
+ 
+<ng-template #vacationInlineItem let-item="item">
+    <div class="row" style="margin: 10px 0">
+      <p style="text-align: center; font-size: 15px; color: green">Inline template</p>
+      <div class="col-sm-12 col-lg-3">
+        <b>Place: {{ item.name }} </b>
+      </div>
+      <div class="col-sm-12 col-lg-3">
+        <span>{{ item.durationInDays }} days</span>
+      </div>
+      <div class="col-sm-12 col-lg-3">
+        Dates: {{ item.dates }}
+      </div>
+      <div class="col-sm-3">
+        <img [src]="item.photo" width="150" height="120" />
+      </div>      
+    </div>
+</ng-template>
+
+<button class="btn btn-primary"(click)="toogleTemplate()"> toogle item template </button>
+
+</section>

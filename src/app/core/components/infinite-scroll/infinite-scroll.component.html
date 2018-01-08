@@ -1,0 +1,13 @@
+<div #infiniteScrollContainer [style.max-height.px]="maxHeight" (scroll)="onScroll()" class="infinite-scroll">
+  <div *ngFor="let item of list">
+    <div [ngTemplateOutlet]="itemTemplate || itemDefault" [ngTemplateOutletContext]="{ item: item }"></div>
+  </div>
+</div>
+<div *ngIf="complete && !list.length" [ngTemplateOutlet]="noResultsTemplate || noResultsDefault"></div>
+<div *ngIf="isLoading" [ngTemplateOutlet]="loadingTemplate || loadingDefault" [ngTemplateOutletContext]="{ isLoading: isLoading }"></div>
+
+<ng-template #loadingDefault>
+  <i class="fa fa-spinner fa-spin" aria-hidden="true" style="font-size: 25px"></i> loading...
+</ng-template>
+<ng-template #noResultsDefault>No results</ng-template>
+<ng-template #itemDefault let-item="item">{{ item }}</ng-template>

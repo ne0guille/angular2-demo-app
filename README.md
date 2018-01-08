@@ -1,6 +1,6 @@
 Small sample application using @angular v5.00, it has infinite scroller component that allows you to dynamically renders template defined on the view or using a component as the template.
 
-**Core/componentes/infinite-scroller ** <br /> component path <br />
+**Core/componentes/infinite-scroller** <br /> component path <br />
 **Modules/vacations** <br /> list sample with both inline template and componente template.
 
 

@@ -1,9 +1,5 @@
 Small sample application using @angular v5.00, it has infinite scroller component that allows you to dynamically renders template defined on the view or using a component as the template.
 
-**Core/componentes/infinite-scroller** <br /> component path <br />
-**Modules/vacations** <br /> list sample with both inline template and componente template.
-
-
 # Angular2Demo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
@@ -27,4 +23,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 TODO
 
-- Add new features modules and lazy load them.
+- Add new features modules using RxJS on component and services.
+- Lazy load new features modules
+

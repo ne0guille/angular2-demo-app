@@ -1,7 +1,8 @@
 import { CoreModule } from './../../core/core.module';
 
-import { CommonModule } from '@angular/common';
 import { NgModule, ModuleWithProviders } from '@angular/core';
+
+import { SharedModule } from './../shared/shared.module';
 
 import { VacationListComponent } from './components/vacation-list/vacation-list.component';
 import { VacationCtComponent } from './containers/vacation-ct.component';
@@ -11,8 +12,7 @@ import { VacationService } from './vacations.service';
 
 @NgModule({
   imports: [
-    CommonModule,
-    CoreModule,
+    SharedModule,
   ],
   declarations: [
     VacationListComponent,
